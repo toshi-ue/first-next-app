@@ -1,0 +1,10 @@
+{
+  // [【分野別】VSCodeのおすすめ拡張機能まとめ - Qiita](https://qiita.com/KNR109/items/5f933df1292564e6dc70#react)
+  // [VSCodeでReactの開発を行う！React開発者のためのオススメ拡張機能。 │ Ugo](https://ugo.tokyo/react-vsc/#ES7_ReactReduxGraphQLReact-Native_snippets)
+  "recommendations": [
+    "jawandarajbir.react-vscode-extension-pack",
+    "dsznajder.es7-react-js-snippets",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint"
+  ]
+}
