@@ -97,14 +97,14 @@
 
 .center::before,
 .center::after {
-  content: '';
+  content: "";
   left: 50%;
   position: absolute;
   filter: blur(45px);
   transform: translateZ(0);
 }
 
-.footer{
+.footer {
   text-align: center;
   margin-bottom: 1rem;
 }
@@ -130,7 +130,7 @@
 
 .thirteen::before,
 .thirteen::after {
-  content: '';
+  content: "";
   position: absolute;
   z-index: -1;
 }
@@ -154,6 +154,10 @@
     rgba(var(--tile-end-rgb), 1)
   );
   background-clip: content-box;
+}
+
+.title {
+  text-transform: capitalize;
 }
 
 /* Enable hover only on non-touch devices */
