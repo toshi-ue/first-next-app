@@ -1,0 +1,15 @@
+{
+  // [[Next.js]複数人で開発する際のPrettierの設定手順メモ](https://zenn.dev/tsucchiiinoko/articles/069fd5b3473367)
+  // [Next.jsの初期設定を整理する](https://zenn.dev/naoki0722/articles/dcd489b97c0393)
+  // [Next.js 12 系における ESLint、Prettier のセットアップメモ - Qiita](https://qiita.com/kewpie134134/items/0298e5b7a88a06804cd8)
+  // デフォルトのフォーマッタを prettier に設定
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // ペーストした文字の自動フォーマット有効
+  "editor.formatOnPaste": true,
+  // ファイル保存時、prettier による自動フォーマット
+  "editor.formatOnSave": true,
+  // ファイル保存時、ESLint による自動フォーマット
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  }
+}
