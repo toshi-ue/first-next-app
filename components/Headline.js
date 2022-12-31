@@ -9,6 +9,7 @@ export function Headline(props) {
       <p>Get started by editing&nbsp;{props.code}</p>
 
       <button onClick={props.onClick}>ボタン</button>
+      <p>{props.children}</p>
     </>
   );
 }
