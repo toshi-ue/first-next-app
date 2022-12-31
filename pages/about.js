@@ -18,7 +18,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <Headline page="about" />
+        <Headline
+          page="about"
+          number={1111}
+          array={[1, 2, 3]}
+          obj={{ foo: "a", bar: "bar" }}
+          boolean
+          comp={<div>component</div>}
+        />
         <Links />
       </main>
 
