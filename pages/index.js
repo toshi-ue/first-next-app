@@ -21,6 +21,7 @@ export default function Home() {
         <Headline
           page="index"
           code={<code className={styles.code}>pages/index.js</code>}
+          onClick={() => alert("クリック!")}
         />
         <Links />
       </main>
