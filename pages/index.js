@@ -22,7 +22,9 @@ export default function Home() {
           page="index"
           code={<code className={styles.code}>pages/index.js</code>}
           onClick={() => alert("クリック!")}
-        />
+        >
+          ちるどれん
+        </Headline>
         <Links />
       </main>
 
