@@ -18,7 +18,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <Headline page="index" />
+        <Headline
+          page="index"
+          code={<code className={styles.code}>pages/index.js</code>}
+        />
         <Links />
       </main>
 

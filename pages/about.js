@@ -24,7 +24,7 @@ export default function Home() {
           array={[1, 2, 3]}
           obj={{ foo: "a", bar: "bar" }}
           boolean
-          comp={<div>component</div>}
+          code={<code className={styles.code}>pages/about.js</code>}
         />
         <Links />
       </main>
