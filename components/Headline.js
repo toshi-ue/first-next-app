@@ -6,10 +6,9 @@ export function Headline(props) {
   return (
     <>
       <h1 className={styles.title}>{props.page} page</h1>
-      <p>Get started by editing&nbsp;{props.code}</p>
+      <p>Get started by editing&nbsp;{props.children}</p>
 
       <button onClick={props.onClick}>ボタン</button>
-      <p>{props.children}</p>
     </>
   );
 }
