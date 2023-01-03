@@ -1,13 +1,13 @@
-<!-- 
+<!--
 [Next.jsと一緒に学ぶReact講座 - YouTube](https://www.youtube.com/playlist?list=PLwM1-TnN_NN6fUhOoZyU4iZiwhLyISopO)
  -->
-<!-- 
+<!--
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
  -->
 
-## Getting Started
+# Getting Started
 
-今回はTypeScriptを使用しない
+今回は TypeScript を使用しない
 
 First, run the development server:
 
@@ -41,3 +41,21 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+### 要約
+
+#### Chapter5
+
+##### CSS Modules は便利
+
+- クラスの管理が楽、コードが簡潔
+- BEM は大変、コードが長い
+- 解決方法としていかのものもある
+  - CSS in JS、styled-components や Emotion などのライブラリを使用
+  - TailWindCSS のフレームワークなどを使用する
+
+##### 使い方
+
+- `[好きな名前].module.css`
+- クラスのみ使える（id などは使えない）
+- グローバル css は`_app.js`でのみ読み込む（他のファイルで読み込み厳禁）

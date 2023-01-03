@@ -1,17 +1,17 @@
 // import Head from 'next/head'
-import Image from 'next/image'
+import Image from "next/image";
 // import { Inter } from '@next/font/google'
-import styles from '../styles/Home.module.css'
+import classes from "./Footer.module.css";
 
 // const inter = Inter({ subsets: ['latin'] })
 
 export function Footer() {
   return (
     <>
-      <footer className={styles.footer}>
+      <footer className={classes.footer}>
         <div>
           <a
-            href='https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
+            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -19,7 +19,7 @@ export function Footer() {
             <Image
               src="/vercel.svg"
               alt="Vercel Logo"
-              className={styles.vercelLogo}
+              className={classes.vercelLogo}
               width={100}
               height={24}
               priority
@@ -28,5 +28,5 @@ export function Footer() {
         </div>
       </footer>
     </>
-  )
+  );
 }
