@@ -34,7 +34,23 @@ export function Links() {
   return (
     <>
       <div className={styles.grid}>
-        <a
+        {ITEMS.map((item) => {
+          console.log(item.title);
+          return (
+            <a
+              // 以下を指定しないと Missing "key" prop for element in iterator というエラーが発生してしまう
+              key={item.title}
+              href={item.href}
+              className={styles.card}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <h2 className={inter.className}>{item.title}</h2>
+              <p className={inter.className}>{item.description}</p>
+            </a>
+          );
+        })}
+        {/* <a
           href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           className={styles.card}
           target="_blank"
@@ -89,7 +105,7 @@ export function Links() {
             Instantly deploy your Next.js site to a shareable URL
             with&nbsp;Vercel.
           </p>
-        </a>
+        </a> */}
       </div>
     </>
   );
