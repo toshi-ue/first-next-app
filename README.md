@@ -44,6 +44,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ### 要約
 
+- データと処理（ロジック）を分けるのがリファクタリングの基本。これを守るだけである程度読みやすくて使いやすいコードになる
+
 #### Chapter5
 
 ##### CSS Modules は便利
@@ -63,3 +65,27 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 #### Chapter6
 
 ##### Link コンポーネント
+
+- ユーザー体験がより高速に
+  - 逆に a タグを使用すると状態が初期化されてしまう
+
+#### Chapter7
+
+##### component を繰り返し使う方法
+
+map を使う
+
+##### 繰り返しを使うメリット
+
+- コード量が少なくて済む
+- component を修正するときに 1 箇所を修正するだけで良い
+
+##### HTML Entities
+
+- `&gt;`アンドで始まり、セミコロンで終わるコード
+- jsx ではエスケープしてくれる
+- HTML Entities をただしく表示させるには
+
+##### 文字列中の HTML タグを HTML に変換する
+
+[【React】HTML 文字列を HTML に変換して表示する方法｜ Web エンジニア研究室](https://www.engilaboo.com/react-html-parse/)
