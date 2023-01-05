@@ -34,10 +34,14 @@ export function Links() {
     <>
       <div className={styles.grid}>
         {ITEMS.map((item) => {
-          console.log(item.title);
           return (
             <a
-              // 以下を指定しないと Missing "key" prop for element in iterator というエラーが発生してしまう
+              // 以下を指定しないと
+              //  VSCodeでは
+              //  Missing "key" prop for element in iterator
+              // ブラウザのコンソールでは
+              //  Warning: Each child in a list should have a unique "key" prop.
+              // というエラーが発生する
               key={item.title}
               href={item.href}
               className={styles.card}
