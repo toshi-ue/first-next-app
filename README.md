@@ -59,3 +59,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - `[好きな名前].module.css`
 - クラスのみ使える（id などは使えない）
 - グローバル css は`_app.js`でのみ読み込む（他のファイルで読み込み厳禁）
+
+#### Chapter6
+
+##### Link コンポーネント
