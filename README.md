@@ -111,10 +111,24 @@ VS Code が jsx に関する構文の補完を出してくれる
   - `index`という名前は js において非常に重要な名前。 名前を`index`に置き換えることでディレクトリ名を参照したときにまずは`index`を探してくれる。
     - このエコシステムを使用することでパスが長くなってしまうのを防いでくれる
 
-<!--
-リモートは各自で応募
-大分では C#も重宝される
-フルリモート移住金制度(大分)あり
+#### 相対パスから絶対パスに変更する
+
+- 相対パスより絶対パスの方が良さげ
+- 変更方法は `next.js absolute path`で調べる
+  - [next absolute path - Google 検索](https://www.google.com/search?q=next+absolute+path&client=firefox-b-d&sxsrf=AJOqlzVZRBaQVDPrw1h_JVZuV14bEo9tmw%3A1673187289741&ei=2c-6Y6rlLI3m2roPvdOA8A8&oq=next+absopath&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAxgAMgYIABAHEB4yCAgAEAgQBxAeMggIABAIEAcQHjIICAAQCBAHEB4yCAgAEAgQBxAeMggIABAIEAcQHjIICAAQCBAHEB4yCAgAEAgQBxAeOgcIIxCwAhAnOgcIABCABBANOggIABAHEB4QCkoECEEYAEoECEYYAFAAWKQHYNQOaABwAXgAgAGkAYgBzASSAQMwLjSYAQCgAQHAAQE&sclient=gws-wiz-serp)
+  - [Advanced Features: Absolute Imports and Module Path Aliases | Next.js](https://nextjs.org/docs/advanced-features/module-path-aliases#:~:text=of%20the%20project.-,an%20example%20of%20this%20configuration%3A,-%2F%2F%20tsconfig.json%20or)
+- VS Code の基本設定では自動インポート補完は相対パスで補完されるので、絶対パスにしたい場合わざわざ修正しなければならず手間がかかる。
+
+  - 絶対パスに変更する場合は VS Code の`.vscode/settings.json`に`"javascript.preferences.importModuleSpecifier": "non-relative"`を追記する
+
+  - <!--
+    
+    
+    
+    
+    リモートは各自で応募
+    大分では C#も重宝される
+    フルリモート移住金制度(大分)あり
 
 履歴書
 ・写真
