@@ -1,0 +1,6 @@
+{
+  // jsconfig.jsonがある場所をベースにする設定
+  "compilerOptions": {
+    "baseUrl": "."
+  }
+}
