@@ -11,5 +11,7 @@
   // ファイル保存時、ESLint による自動フォーマット
   "editor.codeActionsOnSave": {
     "source.fixAll": true
-  }
+  },
+  // importの自動補完を早退パスから絶対パスに変更する設定(nextjsのドキュメントには書いていない)
+  "javascript.preferences.importModuleSpecifier": "non-relative"
 }

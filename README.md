@@ -89,3 +89,77 @@ map を使う
 ##### 文字列中の HTML タグを HTML に変換する
 
 [【React】HTML 文字列を HTML に変換して表示する方法｜ Web エンジニア研究室](https://www.engilaboo.com/react-html-parse/)
+
+#### Chapter8
+
+リファクタリング
+
+##### jsx を使うメリット
+
+VS Code が jsx に関する構文の補完を出してくれる
+
+##### ディレクトリを src にまとめる
+
+- components, pages, styles ディレクトリを移動する（したほうが見やすい、人によって好みあり）
+  - VS Code の場合は自動で import のパスを変更してくれる（してくれないときもあるのでその時は手動で変更する）
+
+#### さらにファイルを component ごとにまとめる
+
+- `Xxx.jsx`と`Xxx.module.css`が同一階層にたくさんあると管理が大変
+  - `Xxx.jsx`と`Xxx.module.css`を`Xxx`というフォルダーを作成しそこに移動する
+  - そのままだと`Caused by: No such file or directory (os error 2)`というエラーが発生する。解決するためには`Xxx.jsx`を`index.jsx`に変更することでエラーが解決する。
+  - `index`という名前は js において非常に重要な名前。 名前を`index`に置き換えることでディレクトリ名を参照したときにまずは`index`を探してくれる。
+    - このエコシステムを使用することでパスが長くなってしまうのを防いでくれる
+
+#### 相対パスから絶対パスに変更する
+
+- 相対パスより絶対パスの方が良さげ
+- 変更方法は `next.js absolute path`で調べる
+  - [next absolute path - Google 検索](https://www.google.com/search?q=next+absolute+path&client=firefox-b-d&sxsrf=AJOqlzVZRBaQVDPrw1h_JVZuV14bEo9tmw%3A1673187289741&ei=2c-6Y6rlLI3m2roPvdOA8A8&oq=next+absopath&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAxgAMgYIABAHEB4yCAgAEAgQBxAeMggIABAIEAcQHjIICAAQCBAHEB4yCAgAEAgQBxAeMggIABAIEAcQHjIICAAQCBAHEB4yCAgAEAgQBxAeOgcIIxCwAhAnOgcIABCABBANOggIABAHEB4QCkoECEEYAEoECEYYAFAAWKQHYNQOaABwAXgAgAGkAYgBzASSAQMwLjSYAQCgAQHAAQE&sclient=gws-wiz-serp)
+  - [Advanced Features: Absolute Imports and Module Path Aliases | Next.js](https://nextjs.org/docs/advanced-features/module-path-aliases#:~:text=of%20the%20project.-,an%20example%20of%20this%20configuration%3A,-%2F%2F%20tsconfig.json%20or)
+- VS Code の基本設定では自動インポート補完は相対パスで補完されるので、絶対パスにしたい場合わざわざ修正しなければならず手間がかかる。
+
+  - 絶対パスに変更する場合は VS Code の`.vscode/settings.json`に`"javascript.preferences.importModuleSpecifier": "non-relative"`を追記する
+
+<!--
+
+      リモートは各自で応募
+      大分では C#も重宝される
+      フルリモート移住金制度(大分)あり
+
+履歴書
+・写真
+・日付は常に最新にする
+職務経歴書
+・IT 業界への転職理由
+なぜ、IT 業界を志すのか / IT 業界で何をしたいのか / 目標など
+・自分でサービスを作りたい、フルスタックエンジニアになりたい
+ok ・活かせる技術・言語
+ok ruby, php, javascript
+ok ・使用ツールなど
+ok GitHub, slack, notion
+ok 箇条書き
+学習期間
+・自己 PR
+性格面と技術面
+ok 組織内でどんなことができるか、どういう対応するのか
+
+ok どこをアピールすればよいのか（学習してきたこと）
+ok PC スキルはある（photoshop, illustrator 使用経験あり）
+- 笑顔で対応
+- 追求できる
+ok 話を深堀する
+  ok 聞く力
+  ok わからないことは聞く
+
+ok どんなことができて、どんなことができるか（編集済み）
+
+面談のときはライトを応募
+wantedly の面談
+
+面接じにはライト
+
+注意点
+- 人の話は最後まで聞いてから発言すること
+- 人間関係で舐められないようにする
+ -->
