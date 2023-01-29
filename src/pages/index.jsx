@@ -6,14 +6,14 @@ import { Header } from "src/components/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const handleClick = (e, foo) => {
-  console.log(e.target.href);
-  e.preventDefault();
-  alert(foo);
-};
-
 export default function Home() {
   const foo = 1;
+
+  const handleClick = (e) => {
+    console.log(e.target.href);
+    e.preventDefault();
+    alert(foo);
+  };
 
   return (
     <>
