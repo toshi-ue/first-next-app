@@ -17,10 +17,17 @@ export default function Home() {
   //   alert(foo);
   // }, []);
 
-  // マウント（レンダリング）されるタイミングで処理が実行される
   useEffect(() => {
+    // マウント（レンダリング）されるタイミングで処理が実行される（背景がlightblueになる）
+    console.log("マウント時");
     document.body.style.backgroundColor = "lightblue";
-  });
+
+    // アンマウント時に実行される処理（背景が元に戻る）
+    console.log("アンマウント時");
+    return () => {
+      document.body.style.backgroundColor = "";
+    };
+  }, []);
 
   return (
     <>
