@@ -17,7 +17,7 @@ export default function Home() {
 
   const handleClick = (e) => {
     // foo = foo + 1;
-    setFoo(foo + 1);
+    setFoo((foo) => foo + 1);
   };
 
   useEffect(() => {
