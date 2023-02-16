@@ -16,21 +16,18 @@ export default function Home() {
   // const setFoo = array[1]
 
   const handleClick = (e) => {
-    // foo = foo + 1;
     setFoo((foo) => foo + 1);
   };
 
   useEffect(() => {
-    // マウント（レンダリング）されるタイミングで処理が実行される（背景がlightblueになる）
-    // console.log("マウント時");
+    console.log("foo");
     document.body.style.backgroundColor = "lightblue";
-
     // アンマウント時に実行される処理（背景が元に戻る）
     // console.log("アンマウント時");
     return () => {
       document.body.style.backgroundColor = "";
     };
-  }, []);
+  }, [foo]);
 
   return (
     <>
