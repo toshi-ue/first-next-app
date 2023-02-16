@@ -121,6 +121,12 @@ VS Code が jsx に関する構文の補完を出してくれる
 
   - 絶対パスに変更する場合は VS Code の`.vscode/settings.json`に`"javascript.preferences.importModuleSpecifier": "non-relative"`を追記する
 
+#### Chapter12
+
+##### useCallback, useEffect の第二引数の使い方
+
+第二引数に値を入れることで、値が変更したことを検知して関数を実行して表示などを更新する。cleanupfunction が先行して実行されることに注意
+
 <!--
 
       リモートは各自で応募
