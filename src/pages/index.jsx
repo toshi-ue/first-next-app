@@ -15,12 +15,12 @@ export default function Home() {
   // const foo = array[0]
   // const setFoo = array[1]
 
-  const handleClick = useCallback((e) => {
+  const handleClick = useCallback(() => {
+    console.log(foo);
     if (foo < 10) {
-      console.log(foo);
       setFoo((foo) => foo + 1);
     }
-  }, []);
+  }, [foo]);
 
   useEffect(() => {
     console.log("foo");
