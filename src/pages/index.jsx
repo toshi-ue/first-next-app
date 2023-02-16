@@ -16,7 +16,10 @@ export default function Home() {
   // const setFoo = array[1]
 
   const handleClick = useCallback((e) => {
-    setFoo((foo) => foo + 1);
+    if (foo < 10) {
+      console.log(foo);
+      setFoo((foo) => foo + 1);
+    }
   }, []);
 
   useEffect(() => {
