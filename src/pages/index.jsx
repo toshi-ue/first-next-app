@@ -17,11 +17,12 @@ export default function Home() {
   const handleAdd = useCallback(() => {
     setArray((prevArray) => {
       // https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax
-      const newArray = [...prevArray, 1];
+      const newArray = [...prevArray, text];
+      console.log(newArray);
       return newArray;
     });
-    alert("abc");
-  }, []);
+  }, [text]);
+
   const handleClick = useCallback(() => {
     console.log(foo);
     if (foo < 10) {
