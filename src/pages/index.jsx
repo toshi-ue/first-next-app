@@ -10,10 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const [foo, setFoo] = useState(1);
-  // 上記の記述は以下の記述と同じ
-  // https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#%E9%85%8D%E5%88%97%E3%81%AE%E5%88%86%E5%89%B2%E4%BB%A3%E5%85%A5
-  // const foo = array[0]
-  // const setFoo = array[1]
+  const [text, setText] = useState("");
 
   const handleClick = useCallback(() => {
     console.log(foo);
@@ -25,13 +22,12 @@ export default function Home() {
   useEffect(() => {
     console.log("foo");
     document.body.style.backgroundColor = "lightblue";
-    // アンマウント時に実行される処理（背景が元に戻る）
-    // console.log("アンマウント時");
     return () => {
       document.body.style.backgroundColor = "";
     };
   }, [foo]);
 
+  // console.log(text);
   return (
     <>
       <Head>
@@ -41,6 +37,13 @@ export default function Home() {
       <Header />
       <h1>{foo}</h1>
       <button onClick={handleClick}>ボタン</button>
+      <input
+        type="text"
+        value={text}
+        onChange={(e) => {
+          setText(e.target.value);
+        }}
+      />
       <Main page="index"></Main>
 
       <Footer />
