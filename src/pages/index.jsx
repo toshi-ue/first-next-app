@@ -20,7 +20,7 @@ export default function Home() {
   }, [foo]);
 
   const handleChange = useCallback((e) => {
-    setText(e.target.value);
+    setText(e.target.value.trim());
   }, []);
 
   useEffect(() => {
