@@ -12,9 +12,14 @@ export default function Home() {
   const [foo, setFoo] = useState(1);
   const [text, setText] = useState("");
   const [isShow, setIsShow] = useState(true);
-  const [array, setArray] = useState([1, 2, 3]);
+  const [array, setArray] = useState([]);
 
   const handleAdd = useCallback(() => {
+    setArray((prevArray) => {
+      // https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax
+      const newArray = [...prevArray, 1];
+      return newArray;
+    });
     alert("abc");
   }, []);
   const handleClick = useCallback(() => {
