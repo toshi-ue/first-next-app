@@ -24,6 +24,10 @@ export default function Home() {
     setText(e.target.value.trim());
   }, []);
 
+  const handleDisplay = useCallback(() => {
+    setIsShow((isShow) => !isShow);
+  }, []);
+
   useEffect(() => {
     console.log("foo");
     document.body.style.backgroundColor = "lightblue";
@@ -40,13 +44,9 @@ export default function Home() {
       </Head>
       <Header />
       {isShow ? <h1>{foo}</h1> : null}
-      {/* <button onClick={handleClick}>ボタン</button> */}
-      <button
-        onClick={() => {
-          setIsShow(false);
-        }}
-      >
-        ひひょうじ
+      <button onClick={handleClick}>ボタン</button>
+      <button onClick={handleDisplay}>
+        {isShow ? "ひひょうじ" : "ひょうじ"}
       </button>
       <input type="text" value={text} onChange={handleChange} />
       <Main page="index"></Main>
