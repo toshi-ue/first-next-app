@@ -16,6 +16,10 @@ export default function Home() {
 
   const handleAdd = useCallback(() => {
     setArray((prevArray) => {
+      if (prevArray.some((item) => item === text)) {
+        alert("同じ要素が既に存在します");
+        return prevArray;
+      }
       // https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax
       const newArray = [...prevArray, text];
       console.log(newArray);
