@@ -19,6 +19,10 @@ export default function Home() {
     }
   }, [foo]);
 
+  const handleChange = useCallback((e) => {
+    setText(e.target.value);
+  }, []);
+
   useEffect(() => {
     console.log("foo");
     document.body.style.backgroundColor = "lightblue";
@@ -27,7 +31,6 @@ export default function Home() {
     };
   }, [foo]);
 
-  // console.log(text);
   return (
     <>
       <Head>
@@ -37,13 +40,7 @@ export default function Home() {
       <Header />
       <h1>{foo}</h1>
       <button onClick={handleClick}>ボタン</button>
-      <input
-        type="text"
-        value={text}
-        onChange={(e) => {
-          setText(e.target.value);
-        }}
-      />
+      <input type="text" value={text} onChange={handleChange} />
       <Main page="index"></Main>
 
       <Footer />
