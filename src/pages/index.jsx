@@ -4,7 +4,7 @@ import { Inter } from "@next/font/google";
 import { Footer } from "src/components/Footer";
 import { Main } from "src/components/Main";
 import { Header } from "src/components/Header";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,22 +15,22 @@ export default function Home() {
   // const foo = array[0]
   // const setFoo = array[1]
 
-  const handleClick = (e) => {
-    // foo = foo + 1;
-    setFoo((foo) => foo + 1);
-  };
+  const handleClick = useCallback(() => {
+    console.log(foo);
+    if (foo < 10) {
+      setFoo((foo) => foo + 1);
+    }
+  }, [foo]);
 
   useEffect(() => {
-    // マウント（レンダリング）されるタイミングで処理が実行される（背景がlightblueになる）
-    // console.log("マウント時");
+    console.log("foo");
     document.body.style.backgroundColor = "lightblue";
-
     // アンマウント時に実行される処理（背景が元に戻る）
     // console.log("アンマウント時");
     return () => {
       document.body.style.backgroundColor = "";
     };
-  }, []);
+  }, [foo]);
 
   return (
     <>
