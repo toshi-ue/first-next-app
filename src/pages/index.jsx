@@ -12,7 +12,11 @@ export default function Home() {
   const [foo, setFoo] = useState(1);
   const [text, setText] = useState("");
   const [isShow, setIsShow] = useState(true);
+  const [array, setArray] = useState([1, 2, 3]);
 
+  const handleAdd = useCallback(() => {
+    alert("abc");
+  }, []);
   const handleClick = useCallback(() => {
     console.log(foo);
     if (foo < 10) {
@@ -49,6 +53,12 @@ export default function Home() {
         {isShow ? "ひひょうじ" : "ひょうじ"}
       </button>
       <input type="text" value={text} onChange={handleChange} />
+      <button onClick={handleAdd}>handleAdd</button>
+      <ul>
+        {array.map((item) => {
+          return <li key={item}>{item}</li>;
+        })}
+      </ul>
       <Main page="index"></Main>
 
       <Footer />
