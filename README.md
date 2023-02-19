@@ -151,3 +151,7 @@ export default function Home() {
 
 JavaScript は現在破壊的メソッドが推奨されていない。
 そのためスプレッド構文などを用いて対応する。
+
+#### Chapter15
+
+##### Custome Hooks(カスタムフック)の使い方、使い所
