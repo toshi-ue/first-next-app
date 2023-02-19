@@ -25,8 +25,7 @@ const useCounter = () => {
   return { foo, isShow, handleClick, handleDisplay };
 };
 
-export default function Home() {
-  const { foo, isShow, handleClick, handleDisplay } = useCounter();
+const useInputArray = () => {
   const [text, setText] = useState("");
   const [array, setArray] = useState([]);
 
@@ -46,6 +45,13 @@ export default function Home() {
   const handleChange = useCallback((e) => {
     setText(e.target.value.trim());
   }, []);
+
+  return { text, array, handleAdd, handleChange };
+};
+
+export default function Home() {
+  const { foo, isShow, handleClick, handleDisplay } = useCounter();
+  const { text, array, handleAdd, handleChange } = useInputArray();
 
   useEffect(() => {
     console.log("foo");
