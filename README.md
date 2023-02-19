@@ -144,3 +144,10 @@ export default function Home() {
   );
 }
 ```
+
+#### Chapter14
+
+##### immutables(不変変数), destructive method(非破壊メソッド)、スプレッド構文
+
+JavaScript は現在破壊的メソッドが推奨されていない。
+そのためスプレッド構文などを用いて対応する。
