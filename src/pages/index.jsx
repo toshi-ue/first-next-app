@@ -12,6 +12,20 @@ export default function Home() {
   const [foo, setFoo] = useState(1);
   const [text, setText] = useState("");
   const [isShow, setIsShow] = useState(true);
+  const [array, setArray] = useState([]);
+
+  const handleAdd = useCallback(() => {
+    setArray((prevArray) => {
+      if (prevArray.some((item) => item === text)) {
+        alert("同じ要素が既に存在します");
+        return prevArray;
+      }
+      // https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax
+      const newArray = [...prevArray, text];
+      console.log(newArray);
+      return newArray;
+    });
+  }, [text]);
 
   const handleClick = useCallback(() => {
     console.log(foo);
@@ -49,6 +63,12 @@ export default function Home() {
         {isShow ? "ひひょうじ" : "ひょうじ"}
       </button>
       <input type="text" value={text} onChange={handleChange} />
+      <button onClick={handleAdd}>handleAdd</button>
+      <ul>
+        {array.map((item) => {
+          return <li key={item}>{item}</li>;
+        })}
+      </ul>
       <Main page="index"></Main>
 
       <Footer />

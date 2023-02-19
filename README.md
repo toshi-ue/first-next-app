@@ -127,45 +127,20 @@ VS Code が jsx に関する構文の補完を出してくれる
 
 第二引数に値を入れることで、値が変更したことを検知して関数を実行して表示などを更新する。cleanupfunction が先行して実行されることに注意
 
-<!--
+#### Chapter13
 
-      リモートは各自で応募
-      大分では C#も重宝される
-      フルリモート移住金制度(大分)あり
+##### useEffect を使用して string, Boolean を扱う
 
-履歴書
-・写真
-・日付は常に最新にする
-職務経歴書
-・IT 業界への転職理由
-なぜ、IT 業界を志すのか / IT 業界で何をしたいのか / 目標など
-・自分でサービスを作りたい、フルスタックエンジニアになりたい
-ok ・活かせる技術・言語
-ok ruby, php, javascript
-ok ・使用ツールなど
-ok GitHub, slack, notion
-ok 箇条書き
-学習期間
-・自己 PR
-性格面と技術面
-ok 組織内でどんなことができるか、どういう対応するのか
+HTML タグでの値の変化による表示の制御は`{}`で囲い、三項演算子を使用する(jsx による制限)。
+何も表示させたくない場合は null を代入する
 
-ok どこをアピールすればよいのか（学習してきたこと）
-ok PC スキルはある（photoshop, illustrator 使用経験あり）
-- 笑顔で対応
-- 追求できる
-ok 話を深堀する
-  ok 聞く力
-  ok わからないことは聞く
-
-ok どんなことができて、どんなことができるか（編集済み）
-
-面談のときはライトを応募
-wantedly の面談
-
-面接じにはライト
-
-注意点
-- 人の話は最後まで聞いてから発言すること
-- 人間関係で舐められないようにする
- -->
+```jsx:example.jsx
+export default function Home() {
+  return (
+    <>
+      <button onClick={handleDisplay}>{isShow ? "ひひょうじ" : "ひょうじ"}</button>
+      <button onClick={handleDisplay}>{isShow ? "表示する" : null }</button>
+    </>
+  );
+}
+```
