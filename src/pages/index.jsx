@@ -25,9 +25,19 @@ const useCounter = () => {
   return { foo, isShow, handleClick, handleDisplay };
 };
 
+const useBackgroundLightBlue = () => {
+  useEffect(() => {
+    document.body.style.backgroundColor = "lightblue";
+    return () => {
+      document.body.style.backgroundColor = "";
+    };
+  }, []);
+};
+
 const useInputArray = () => {
   const [text, setText] = useState("");
   const [array, setArray] = useState([]);
+  useBackgroundLightBlue();
 
   const handleAdd = useCallback(() => {
     setArray((prevArray) => {
@@ -52,14 +62,6 @@ const useInputArray = () => {
 export default function Home() {
   const { foo, isShow, handleClick, handleDisplay } = useCounter();
   const { text, array, handleAdd, handleChange } = useInputArray();
-
-  useEffect(() => {
-    console.log("foo");
-    document.body.style.backgroundColor = "lightblue";
-    return () => {
-      document.body.style.backgroundColor = "";
-    };
-  }, [foo]);
 
   return (
     <>
