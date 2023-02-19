@@ -5,25 +5,9 @@ import { Footer } from "src/components/Footer";
 import { Main } from "src/components/Main";
 import { Header } from "src/components/Header";
 import { useCallback, useEffect, useState } from "react";
+import { useCounter } from "src/fooks/useCounter";
 
 const inter = Inter({ subsets: ["latin"] });
-
-const useCounter = () => {
-  const [foo, setFoo] = useState(1);
-  const [isShow, setIsShow] = useState(true);
-
-  const handleClick = useCallback(() => {
-    if (foo < 10) {
-      setFoo((foo) => foo + 1);
-    }
-  }, [foo]);
-
-  const handleDisplay = useCallback(() => {
-    setIsShow((isShow) => !isShow);
-  }, []);
-
-  return { foo, isShow, handleClick, handleDisplay };
-};
 
 const useBackgroundLightBlue = () => {
   useEffect(() => {
