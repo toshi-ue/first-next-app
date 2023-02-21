@@ -4,48 +4,16 @@ import { Inter } from "@next/font/google";
 import { Footer } from "src/components/Footer";
 import { Main } from "src/components/Main";
 import { Header } from "src/components/Header";
-import { useCallback, useEffect, useState } from "react";
 import { useCounter } from "src/fooks/useCounter";
+import { useInputArray } from "src/fooks/useInputArray";
+import { useBackgroundLightBlue } from "src/fooks/useBackgroundLightBlue";
 
 const inter = Inter({ subsets: ["latin"] });
-
-const useBackgroundLightBlue = () => {
-  useEffect(() => {
-    document.body.style.backgroundColor = "lightblue";
-    return () => {
-      document.body.style.backgroundColor = "";
-    };
-  }, []);
-};
-
-const useInputArray = () => {
-  const [text, setText] = useState("");
-  const [array, setArray] = useState([]);
-  useBackgroundLightBlue();
-
-  const handleAdd = useCallback(() => {
-    setArray((prevArray) => {
-      if (prevArray.some((item) => item === text)) {
-        alert("同じ要素が既に存在します");
-        return prevArray;
-      }
-
-      const newArray = [...prevArray, text];
-      console.log(newArray);
-      return newArray;
-    });
-  }, [text]);
-
-  const handleChange = useCallback((e) => {
-    setText(e.target.value.trim());
-  }, []);
-
-  return { text, array, handleAdd, handleChange };
-};
 
 export default function Home() {
   const { foo, isShow, handleClick, handleDisplay } = useCounter();
   const { text, array, handleAdd, handleChange } = useInputArray();
+  useBackgroundLightBlue();
 
   return (
     <>
