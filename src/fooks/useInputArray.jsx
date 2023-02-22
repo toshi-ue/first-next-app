@@ -5,6 +5,10 @@ export const useInputArray = () => {
   const [array, setArray] = useState([]);
 
   const handleAdd = useCallback(() => {
+    if (text == "") {
+      alert("値を入力してください");
+      return;
+    }
     setArray((prevArray) => {
       if (prevArray.some((item) => item === text)) {
         alert("同じ要素が既に存在します");
