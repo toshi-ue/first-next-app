@@ -10,7 +10,7 @@ import { useBackgroundLightBlue } from "src/fooks/useBackgroundLightBlue";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+export default function About() {
   const { foo, isShow, handleClick, handleDisplay } = useCounter();
   const { text, array, handleAdd, handleChange } = useInputArray();
   useBackgroundLightBlue();
