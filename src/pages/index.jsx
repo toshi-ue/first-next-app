@@ -5,9 +5,6 @@ import { Inter } from "@next/font/google";
 import { Footer } from "src/components/Footer";
 import { Main } from "src/components/Main";
 import { Header } from "src/components/Header";
-import { useCounter } from "src/fooks/useCounter";
-import { useInputArray } from "src/fooks/useInputArray";
-import { useBackgroundLightBlue } from "src/fooks/useBackgroundLightBlue";
 
 const inter = Inter({ subsets: ["latin"] });
 
