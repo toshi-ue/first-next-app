@@ -18,17 +18,6 @@ export default function About(props) {
     handleAdd,
     handleChange,
   } = props;
-  // 以下のような書き方もできる
-  // export default function About({
-  //     foo,
-  //     isShow,
-  //     handleClick,
-  //     handleDisplay,
-  //     text,
-  //     array,
-  //     handleAdd,
-  //     handleChange,
-  //   })
 
   return (
     <div className={styles.container}>
