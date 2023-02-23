@@ -2,18 +2,18 @@
 // ディレクトリ名はlibs, utilsなどでもよい。チームの決まりごとに従うこと
 import { useCallback, useState } from "react";
 export const useCounter = () => {
-  const [foo, setFoo] = useState(1);
+  const [count, setCount] = useState(1);
   const [isShow, setIsShow] = useState(true);
 
   const handleClick = useCallback(() => {
-    if (foo < 10) {
-      setFoo((foo) => foo + 1);
+    if (count < 10) {
+      setCount((count) => count + 1);
     }
-  }, [foo]);
+  }, [count]);
 
   const handleDisplay = useCallback(() => {
     setIsShow((isShow) => !isShow);
   }, []);
 
-  return { foo, isShow, handleClick, handleDisplay };
+  return { count, isShow, handleClick, handleDisplay };
 };

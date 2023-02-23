@@ -12,7 +12,7 @@ import { useBackgroundLightBlue } from "src/fooks/useBackgroundLightBlue";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home({
-  foo,
+  count,
   isShow,
   handleClick,
   handleDisplay,
@@ -29,7 +29,7 @@ export default function Home({
       </Head>
       <Header />
 
-      {isShow ? <h1>{foo}</h1> : null}
+      {isShow ? <h1>{count}</h1> : null}
       <button onClick={handleClick}>ボタン</button>
       <button onClick={handleDisplay}>
         {isShow ? "ひひょうじ" : "ひょうじ"}
