@@ -194,3 +194,13 @@ JavaScript は現在破壊的メソッドが推奨されていない。
 - ページ間での状態を共通化する方法(Next.js 可、React.js 不可 - [【Next.js で学ぶ React 講座 #16】State のリフトアップでページ間やコンポーネント間で値を共通化しよう！ - YouTube](https://youtu.be/Jhi2X4zkyPI?list=PLwM1-TnN_NN6fUhOoZyU4iZiwhLyISopO&t=627))
 - コンポーネント間での状態を共通化する方法(Next.js 可、React.js 可)
   - 親からは props, 子で引数に値を分割代入する
+
+#### Chapter17
+
+##### useMemo, useRouter
+
+useMemo は必要なタイミングで値の評価、再生成させるために使用する。
+パフォーマンスの向上につながる可能性が高い。
+
+useRouter で使用できるプロパティは以下
+[next/router | Next.js](https://nextjs.org/docs/api-reference/next/router#router-object)
