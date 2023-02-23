@@ -11,11 +11,16 @@ import { useBackgroundLightBlue } from "src/fooks/useBackgroundLightBlue";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
-  const { foo, isShow, handleClick, handleDisplay } = useCounter();
-  const { text, array, handleAdd, handleChange } = useInputArray();
-  useBackgroundLightBlue();
-
+export default function Home({
+  foo,
+  isShow,
+  handleClick,
+  handleDisplay,
+  text,
+  array,
+  handleAdd,
+  handleChange,
+}) {
   return (
     <div className={styles.container}>
       <Head>
